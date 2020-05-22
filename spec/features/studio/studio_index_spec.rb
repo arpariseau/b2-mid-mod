@@ -23,23 +23,13 @@ RSpec.describe "Studio index page", type: :feature do
 
     within(".studio-#{mgm.id}") do
       expect(page).to have_content(mgm.name)
-      expect(page).to have_content(ben_hur.name)
-      expect(page).to have_content(odyssey.name)
+      expect(page).to have_content(ben_hur.title)
+      expect(page).to have_content(odyssey.title)
     end
 
     within(".studio-#{fox.id}") do
       expect(page).to have_content(fox.name)
-      expect(page).to have_content(apes.name)
+      expect(page).to have_content(apes.title)
     end
   end
 end
-
-# Story 1
-# As a visitor,
-# When I visit the studio index page
-# I see a list of all of the movie studios
-# And underneath each studio, I see the names of all of its movies.
-
-# Studios have a name and location
-# Movies have a title, creation year, and genre
-# Actors have a name and age
