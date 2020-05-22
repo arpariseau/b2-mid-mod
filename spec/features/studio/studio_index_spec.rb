@@ -6,6 +6,7 @@ RSpec.describe "Studio index page", type: :feature do
                         location: "Beverly Hills, CA")
     fox = Studio.create(name: "20th Century Fox",
                         location: "Los Angeles, CA")
+                        
     ben_hur = Movie.create(title: "Ben-Hur",
                            year: 1959,
                            genre: "epic",
