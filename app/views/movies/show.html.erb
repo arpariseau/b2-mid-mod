@@ -6,3 +6,10 @@
 <% end %>
 <br/>
 <p>Average Age of Actors: <%= @movie.avg_actors_age %></p>
+<br/>
+<%= form_tag "/movies/#{@movie.id}/actors" do %>
+<%= label_tag :actor_name, "Actor Name:" %>
+<%= text_field_tag :actor_name %>
+<br/>
+<%= submit_tag "Add Actor" %>
+<% end %>

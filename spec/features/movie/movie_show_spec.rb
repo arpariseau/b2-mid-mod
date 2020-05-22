@@ -57,13 +57,8 @@ RSpec.describe "Movie show page", type: :feature do
 
     expect(martin.name).to appear_before(@jack.name)
     expect(@matt.name).to appear_before(martin.name)
+    new_avg_age = (@leo.age + @jack.age + @matt.age +
+                   @mark.age + martin.age).to_f / 5
+    expect(page).to have_content(new_avg_age)
   end
 end
-
-# Story 3
-# As a visitor,
-# When I visit a movie show page,
-# I see a form for an actors name
-# and when I fill in the form with an existing actor's name
-# I am redirected back to that movie's show page
-# And I see the actor's name listed
