@@ -1,0 +1,10 @@
+<h1> <%= @actor.name %> </h1>
+<h3> Age: <%= @actor.age %> </h3>
+<br/>
+<p>Has worked with: <br/>
+<% @actor.movies.each do |movie| %>
+  <% movie.actors_other_than(@actor.id).each do |other_actor| %>
+    <%= other_actor.name %> <br/>
+  <% end %>
+<% end %>
+</p>
