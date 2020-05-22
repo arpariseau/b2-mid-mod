@@ -12,4 +12,8 @@ class Movie < ApplicationRecord
     actors.average(:age)
   end
 
+  def actors_other_than(actor_id)
+    binding.pry
+  end
+
 end
